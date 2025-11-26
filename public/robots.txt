@@ -1,0 +1,10 @@
+# GlobalVIN Robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://globalvin.com/sitemap.xml
+
+# Disallow admin/private areas (if any)
+Disallow: /api/
+Disallow: /admin/
