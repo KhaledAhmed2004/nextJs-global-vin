@@ -1,0 +1,3 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["chunks/vin_GlobalVin-master_edge-wrapper_5411c673.js",31392,(e,t,l)=>{self._ENTRIES||={};let n=Promise.resolve().then(()=>e.i(98185));n.catch(()=>{}),self._ENTRIES.middleware_middleware=new Proxy(n,{get(e,t){if("then"===t)return(t,l)=>e.then(t,l);let l=(...l)=>e.then(e=>(0,e[t])(...l));return l.then=(l,n)=>e.then(e=>e[t]).then(l,n),l}})}]);
+
+//# sourceMappingURL=vin_GlobalVin-master_edge-wrapper_5411c673.js.map

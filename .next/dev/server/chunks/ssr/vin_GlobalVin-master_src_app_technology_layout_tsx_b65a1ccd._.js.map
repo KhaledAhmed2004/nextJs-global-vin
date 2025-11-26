@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/khaled/Downloads/vin/GlobalVin-master/src/app/technology/layout.tsx"],"sourcesContent":["import { Metadata } from \"next\";\n\nexport const metadata: Metadata = {\n  title: \"GlobalVIN Technology | Vehicle Report Platform\",\n  description: \"Discover GlobalVIN's technology platform. White-label solutions, admin dashboard, mobile apps, and comprehensive vehicle history report tools for your franchise.\",\n  keywords: \"vehicle report technology, VIN platform, white-label reports, car history software, GlobalVIN franchise\",\n  openGraph: {\n    title: \"GlobalVIN Technology | Vehicle Report Platform\",\n    description: \"Discover GlobalVIN's technology platform. White-label solutions and comprehensive vehicle history report tools.\",\n    url: \"https://globalvin.com/technology\",\n    siteName: \"GlobalVIN\",\n    type: \"website\",\n  },\n};\n\nexport default function TechnologyLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return <>{children}</>;\n}"],"names":[],"mappings":";;;;;;;;AAEO,MAAM,WAAqB;IAChC,OAAO;IACP,aAAa;IACb,UAAU;IACV,WAAW;QACT,OAAO;QACP,aAAa;QACb,KAAK;QACL,UAAU;QACV,MAAM;IACR;AACF;AAEe,SAAS,iBAAiB,EACvC,QAAQ,EAGT;IACC,qBAAO;kBAAG;;AACZ","debugId":null}}]
+}

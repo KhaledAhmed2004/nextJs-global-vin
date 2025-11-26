@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/dashboard/layout,_N_T_/dashboard/franchises/layout,_N_T_/dashboard/franchises/manage/layout,_N_T_/dashboard/franchises/manage/page,_N_T_/dashboard/franchises/manage"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/dashboard/franchises/manage/__PAGE__",
+    "/dashboard/franchises/manage",
+    "/dashboard/franchises",
+    "/dashboard",
+    "/_index"
+  ]
+}

@@ -1,0 +1,11 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/_global-error/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__36e33a10._.js")
+R.c("server/chunks/ssr/vin_GlobalVin-master_02eb9597._.js")
+R.c("server/chunks/ssr/025c9_next_dist_0478c405._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__a14b7f98._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__52f4fff7._.js")
+R.c("server/chunks/ssr/025c9_next_dist_ead511a5._.js")
+R.c("server/chunks/ssr/vin_GlobalVin-master_src_app_1dbea742._.js")
+R.c("server/chunks/ssr/dc870_GlobalVin-master__next-internal_server_app__global-error_page_actions_43e04796.js")
+R.m(70478)
+module.exports=R.m(70478).exports
