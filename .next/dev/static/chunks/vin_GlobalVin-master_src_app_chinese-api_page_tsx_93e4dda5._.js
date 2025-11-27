@@ -34,10 +34,31 @@ function ChineseApiPage() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate form submission
-        await new Promise((resolve)=>setTimeout(resolve, 1000));
-        setIsSubmitting(false);
-        setSubmitted(true);
+        try {
+            const response = await fetch("/api/leads", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    company: formData.company,
+                    message: formData.message,
+                    source: "chinese-api"
+                })
+            });
+            if (!response.ok) {
+                throw new Error("Failed to submit");
+            }
+            setSubmitted(true);
+        } catch (error) {
+            console.error("Error submitting lead:", error);
+            alert("Failed to submit. Please try again.");
+        } finally{
+            setIsSubmitting(false);
+        }
     };
     const handleChange = (e)=>{
         setFormData({
@@ -51,7 +72,7 @@ function ChineseApiPage() {
                 className: "w-6 h-6"
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 46,
+                lineNumber: 68,
                 columnNumber: 13
             }, this),
             title: "Registration Data",
@@ -62,7 +83,7 @@ function ChineseApiPage() {
                 className: "w-6 h-6"
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 52,
+                lineNumber: 74,
                 columnNumber: 13
             }, this),
             title: "Inspection Records",
@@ -73,7 +94,7 @@ function ChineseApiPage() {
                 className: "w-6 h-6"
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 58,
+                lineNumber: 80,
                 columnNumber: 13
             }, this),
             title: "Manufacturing Info",
@@ -84,7 +105,7 @@ function ChineseApiPage() {
                 className: "w-6 h-6"
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 64,
+                lineNumber: 86,
                 columnNumber: 13
             }, this),
             title: "Export Documentation",
@@ -95,7 +116,7 @@ function ChineseApiPage() {
                 className: "w-6 h-6"
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 70,
+                lineNumber: 92,
                 columnNumber: 13
             }, this),
             title: "Accident History",
@@ -106,7 +127,7 @@ function ChineseApiPage() {
                 className: "w-6 h-6"
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 76,
+                lineNumber: 98,
                 columnNumber: 13
             }, this),
             title: "Fraud Detection",
@@ -143,486 +164,486 @@ function ChineseApiPage() {
         className: "min-h-screen bg-white",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-20",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20",
                 style: {
                     background: "linear-gradient(135deg, #DC2626 0%, #B91C1C 35.36%, #7F1D1D 70.71%)"
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-6xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-10",
+                    className: "max-w-6xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6",
+                                    className: "inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4 sm:mb-6",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-sm font-medium",
                                         children: "China Market Specialist"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 124,
+                                        lineNumber: 146,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 123,
+                                    lineNumber: 145,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    className: "text-4xl md:text-5xl font-bold mb-6",
+                                    className: "text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6",
                                     children: "China Vehicle Data API"
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 148,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-red-100 text-lg mb-8",
+                                    className: "text-red-100 text-base sm:text-lg mb-6 sm:mb-8",
                                     children: "Unlock comprehensive access to Chinese vehicle data. From registration records to manufacturing details, get the information you need for the world's largest automotive market."
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 129,
+                                    lineNumber: 151,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex flex-wrap gap-4",
+                                    className: "flex flex-col sm:flex-row gap-3 sm:gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#contact-form",
-                                            className: "bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center gap-2",
+                                            className: "bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2 min-h-[48px]",
                                             children: [
                                                 "Get API Access ",
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$bs$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BsArrowRight"], {}, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 139,
+                                                    lineNumber: 161,
                                                     columnNumber: 34
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 135,
+                                            lineNumber: 157,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#features",
-                                            className: "border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition",
+                                            className: "border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition text-center min-h-[48px] flex items-center justify-center",
                                             children: "View Features"
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 141,
+                                            lineNumber: 163,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 134,
+                                    lineNumber: 156,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 122,
+                            lineNumber: 144,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-center lg:justify-end gap-4",
+                            className: "flex items-center justify-center lg:justify-end gap-4 mt-6 lg:mt-0",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-white/10 backdrop-blur rounded-lg w-full max-w-[320px] p-6",
+                                className: "bg-white/10 backdrop-blur rounded-lg w-full max-w-[320px] p-4 sm:p-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex items-center gap-3 mb-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-red-500 p-3 rounded-lg",
+                                                className: "bg-red-500 p-3 rounded-lg flex-shrink-0",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaGlobe"], {
-                                                    className: "w-6 h-6"
+                                                    className: "w-5 h-5 sm:w-6 sm:h-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 154,
+                                                    lineNumber: 176,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 153,
+                                                lineNumber: 175,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "font-bold text-lg",
+                                                        className: "font-bold text-base sm:text-lg",
                                                         children: "31 Provinces"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 157,
+                                                        lineNumber: 179,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-red-100 text-sm",
+                                                        className: "text-red-100 text-xs sm:text-sm",
                                                         children: "Complete coverage"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 158,
+                                                        lineNumber: 180,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 156,
+                                                lineNumber: 178,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 174,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex items-center gap-3",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-red-500 p-3 rounded-lg",
+                                                className: "bg-red-500 p-3 rounded-lg flex-shrink-0",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaIndustry"], {
-                                                    className: "w-6 h-6"
+                                                    className: "w-5 h-5 sm:w-6 sm:h-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 163,
+                                                    lineNumber: 185,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 162,
+                                                lineNumber: 184,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "font-bold text-lg",
+                                                        className: "font-bold text-base sm:text-lg",
                                                         children: "Local Manufacturers"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 166,
+                                                        lineNumber: 188,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-red-100 text-sm",
+                                                        className: "text-red-100 text-xs sm:text-sm",
                                                         children: "BYD, Geely, NIO & more"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 167,
+                                                        lineNumber: 189,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 187,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 183,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 151,
+                                lineNumber: 173,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 150,
+                            lineNumber: 172,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 121,
+                    lineNumber: 143,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 114,
+                lineNumber: 136,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-16 bg-white",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-6xl mx-auto",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid grid-cols-2 md:grid-cols-4 gap-8 text-center",
+                        className: "grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-4xl font-bold text-red-600 mb-2",
+                                        className: "text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-1 sm:mb-2",
                                         children: "300M+"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 180,
+                                        lineNumber: 202,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600",
+                                        className: "text-gray-600 text-sm sm:text-base",
                                         children: "Vehicles Registered"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 203,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 179,
+                                lineNumber: 201,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-4xl font-bold text-red-600 mb-2",
+                                        className: "text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-1 sm:mb-2",
                                         children: "31"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 184,
+                                        lineNumber: 206,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600",
+                                        className: "text-gray-600 text-sm sm:text-base",
                                         children: "Provinces Covered"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 207,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 183,
+                                lineNumber: 205,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-4xl font-bold text-red-600 mb-2",
+                                        className: "text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-1 sm:mb-2",
                                         children: "100+"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 210,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600",
+                                        className: "text-gray-600 text-sm sm:text-base",
                                         children: "Manufacturers"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 189,
+                                        lineNumber: 211,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 187,
+                                lineNumber: 209,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-4xl font-bold text-red-600 mb-2",
+                                        className: "text-2xl sm:text-3xl md:text-4xl font-bold text-red-600 mb-1 sm:mb-2",
                                         children: "24/7"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 214,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600",
+                                        className: "text-gray-600 text-sm sm:text-base",
                                         children: "API Availability"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 215,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 191,
+                                lineNumber: 213,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                        lineNumber: 178,
+                        lineNumber: 200,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 177,
+                    lineNumber: 199,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 176,
+                lineNumber: 198,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "features",
-                className: "px-4 py-20 bg-gray-50",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gray-50",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-bold text-center mb-4",
+                            className: "text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4",
                             children: "Comprehensive China Vehicle Data"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 202,
+                            lineNumber: 224,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-center text-gray-600 mb-12 max-w-2xl mx-auto",
+                            className: "text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4",
                             children: "Access the full range of Chinese vehicle information through our powerful API platform"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 205,
+                            lineNumber: 227,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-2 lg:grid-cols-3 gap-8",
+                            className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8",
                             children: features.map((feature, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition",
+                                    className: "bg-white border border-gray-200 rounded-lg p-4 sm:p-6 hover:shadow-lg transition",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-red-100 text-red-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
+                                            className: "bg-red-100 text-red-600 w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center mb-3 sm:mb-4",
                                             children: feature.icon
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 216,
+                                            lineNumber: 238,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-bold mb-2",
+                                            className: "text-lg sm:text-xl font-bold mb-2",
                                             children: feature.title
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 219,
+                                            lineNumber: 241,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-600",
+                                            className: "text-gray-600 text-sm sm:text-base",
                                             children: feature.description
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 220,
+                                            lineNumber: 242,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 212,
+                                    lineNumber: 234,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 210,
+                            lineNumber: 232,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 201,
+                    lineNumber: 223,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 200,
+                lineNumber: 222,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-20 bg-white",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-bold text-center mb-4",
+                            className: "text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4",
                             children: "Who Uses Our China API?"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 230,
+                            lineNumber: 252,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-center text-gray-600 mb-12 max-w-2xl mx-auto",
+                            className: "text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4",
                             children: "Our China vehicle data API serves diverse industries worldwide"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 233,
+                            lineNumber: 255,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-2 lg:grid-cols-4 gap-6",
+                            className: "grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6",
                             children: useCases.map((useCase, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gray-50 border border-gray-200 rounded-lg p-6 text-center hover:shadow-lg transition",
+                                    className: "bg-gray-50 border border-gray-200 rounded-lg p-4 sm:p-6 text-center hover:shadow-lg transition",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-lg font-bold mb-2",
+                                            className: "text-base sm:text-lg font-bold mb-2",
                                             children: useCase.title
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 243,
+                                            lineNumber: 265,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-600 text-sm",
+                                            className: "text-gray-600 text-xs sm:text-sm",
                                             children: useCase.description
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 244,
+                                            lineNumber: 266,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 239,
+                                    lineNumber: 261,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 237,
+                            lineNumber: 259,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 229,
+                    lineNumber: 251,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 228,
+                lineNumber: 250,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-20 bg-gray-50",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gray-50",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-bold text-center mb-4",
+                            className: "text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4",
                             children: "How It Works"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 254,
+                            lineNumber: 276,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-center text-gray-600 mb-12 max-w-2xl mx-auto",
+                            className: "text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4",
                             children: "Start accessing Chinese vehicle data in three simple steps"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 257,
+                            lineNumber: 279,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-3 gap-8",
+                            className: "grid sm:grid-cols-3 gap-6 sm:gap-8",
                             children: [
                                 {
                                     step: "01",
@@ -643,78 +664,78 @@ function ChineseApiPage() {
                                     className: "text-center",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-red-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4",
+                                            className: "bg-red-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto mb-3 sm:mb-4",
                                             children: item.step
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 283,
+                                            lineNumber: 305,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-xl font-bold mb-2",
+                                            className: "text-lg sm:text-xl font-bold mb-2",
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 286,
+                                            lineNumber: 308,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-600",
+                                            className: "text-gray-600 text-sm sm:text-base",
                                             children: item.description
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 287,
+                                            lineNumber: 309,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 282,
+                                    lineNumber: 304,
                                     columnNumber: 17
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 261,
+                            lineNumber: 283,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 253,
+                    lineNumber: 275,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 252,
+                lineNumber: 274,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-20 bg-white",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-6xl mx-auto",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid lg:grid-cols-2 gap-12 items-center",
+                        className: "grid lg:grid-cols-2 gap-8 lg:gap-12 items-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-3xl md:text-4xl font-bold mb-6",
+                                        className: "text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6",
                                         children: "Why Choose GlobalVIN for China Data?"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 299,
+                                        lineNumber: 321,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600 mb-8",
+                                        className: "text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base",
                                         children: "We have established partnerships with Chinese data providers and government agencies to deliver accurate, up-to-date vehicle information from the world's largest auto market."
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 324,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                        className: "space-y-4",
+                                        className: "space-y-3 sm:space-y-4",
                                         children: benefits.map((benefit, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                 className: "flex items-center gap-3",
                                                 children: [
@@ -722,212 +743,212 @@ function ChineseApiPage() {
                                                         className: "text-green-500 w-5 h-5 flex-shrink-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 310,
+                                                        lineNumber: 332,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-gray-700",
+                                                        className: "text-gray-700 text-sm sm:text-base",
                                                         children: benefit
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 311,
+                                                        lineNumber: 333,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, idx, true, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 309,
+                                                lineNumber: 331,
                                                 columnNumber: 21
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 307,
+                                        lineNumber: 329,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 298,
+                                lineNumber: 320,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-gray-50 border border-gray-200 rounded-xl p-8",
+                                className: "bg-gray-50 border border-gray-200 rounded-xl p-6 sm:p-8 mt-6 lg:mt-0",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-4 mb-6",
+                                        className: "flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-red-100 text-red-600 p-4 rounded-xl",
+                                                className: "bg-red-100 text-red-600 p-3 sm:p-4 rounded-xl flex-shrink-0",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$bi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BiSupport"], {
-                                                    className: "w-8 h-8"
+                                                    className: "w-6 h-6 sm:w-8 sm:h-8"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 319,
+                                                    lineNumber: 341,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 318,
+                                                lineNumber: 340,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "text-xl font-bold",
+                                                        className: "text-lg sm:text-xl font-bold",
                                                         children: "Bilingual Support"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 322,
+                                                        lineNumber: 344,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-gray-600",
+                                                        className: "text-gray-600 text-sm sm:text-base",
                                                         children: "English & Chinese teams"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 323,
+                                                        lineNumber: 345,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 321,
+                                                lineNumber: 343,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 317,
+                                        lineNumber: 339,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-4",
+                                        className: "flex items-center gap-3 sm:gap-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "bg-red-100 text-red-600 p-4 rounded-xl",
+                                                className: "bg-red-100 text-red-600 p-3 sm:p-4 rounded-xl flex-shrink-0",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaClock"], {
-                                                    className: "w-8 h-8"
+                                                    className: "w-6 h-6 sm:w-8 sm:h-8"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 328,
+                                                    lineNumber: 350,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 327,
+                                                lineNumber: 349,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                        className: "text-xl font-bold",
+                                                        className: "text-lg sm:text-xl font-bold",
                                                         children: "China Timezone Support"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 331,
+                                                        lineNumber: 353,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-gray-600",
+                                                        className: "text-gray-600 text-sm sm:text-base",
                                                         children: "Local business hours coverage"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                        lineNumber: 332,
+                                                        lineNumber: 354,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 330,
+                                                lineNumber: 352,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                        lineNumber: 326,
+                                        lineNumber: 348,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                lineNumber: 316,
+                                lineNumber: 338,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                        lineNumber: 297,
+                        lineNumber: 319,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 296,
+                    lineNumber: 318,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 295,
+                lineNumber: 317,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 id: "contact-form",
-                className: "px-4 py-20 bg-gray-50",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gray-50",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-4xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-bold text-center mb-4",
+                            className: "text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4",
                             children: "Get Started with China Vehicle API"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 343,
+                            lineNumber: 365,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-center text-gray-600 mb-12",
+                            className: "text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base px-4",
                             children: "Fill out the form below and our China market team will contact you within 24 hours"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 346,
+                            lineNumber: 368,
                             columnNumber: 13
                         }, this),
                         submitted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-green-50 border border-green-200 rounded-xl p-8 text-center",
+                            className: "bg-green-50 border border-green-200 rounded-xl p-6 sm:p-8 text-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$bs$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BsCheckCircleFill"], {
-                                    className: "text-green-500 w-16 h-16 mx-auto mb-4"
+                                    className: "text-green-500 w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4"
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 353,
+                                    lineNumber: 375,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-2xl font-bold text-green-800 mb-2",
+                                    className: "text-xl sm:text-2xl font-bold text-green-800 mb-2",
                                     children: "Thank You!"
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 354,
+                                    lineNumber: 376,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-green-700",
+                                    className: "text-green-700 text-sm sm:text-base",
                                     children: "We've received your request. Our China market team will contact you within 24 hours."
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 357,
+                                    lineNumber: 379,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 352,
+                            lineNumber: 374,
                             columnNumber: 15
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                             onSubmit: handleSubmit,
-                            className: "bg-white rounded-xl p-8 shadow-sm",
+                            className: "bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-sm",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "grid md:grid-cols-2 gap-6 mb-6",
+                                    className: "grid sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
@@ -936,7 +957,7 @@ function ChineseApiPage() {
                                                     children: "Full Name *"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 369,
+                                                    lineNumber: 391,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -946,7 +967,7 @@ function ChineseApiPage() {
                                                             className: "absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 373,
+                                                            lineNumber: 395,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -955,23 +976,23 @@ function ChineseApiPage() {
                                                             value: formData.name,
                                                             onChange: handleChange,
                                                             required: true,
-                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none",
+                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]",
                                                             placeholder: "John Doe"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 374,
+                                                            lineNumber: 396,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 372,
+                                                    lineNumber: 394,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 368,
+                                            lineNumber: 390,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -981,7 +1002,7 @@ function ChineseApiPage() {
                                                     children: "Email Address *"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 386,
+                                                    lineNumber: 408,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -991,7 +1012,7 @@ function ChineseApiPage() {
                                                             className: "absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 390,
+                                                            lineNumber: 412,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1000,33 +1021,33 @@ function ChineseApiPage() {
                                                             value: formData.email,
                                                             onChange: handleChange,
                                                             required: true,
-                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none",
+                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]",
                                                             placeholder: "john@company.com"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 391,
+                                                            lineNumber: 413,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 389,
+                                                    lineNumber: 411,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 385,
+                                            lineNumber: 407,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                                     className: "block text-sm font-medium text-gray-700 mb-2",
-                                                    children: "Phone Number"
+                                                    children: "Phone Number *"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 403,
+                                                    lineNumber: 425,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1036,7 +1057,7 @@ function ChineseApiPage() {
                                                             className: "absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 407,
+                                                            lineNumber: 429,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1044,23 +1065,24 @@ function ChineseApiPage() {
                                                             name: "phone",
                                                             value: formData.phone,
                                                             onChange: handleChange,
-                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none",
+                                                            required: true,
+                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]",
                                                             placeholder: "+1 (555) 000-0000"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 408,
+                                                            lineNumber: 430,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 406,
+                                                    lineNumber: 428,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 402,
+                                            lineNumber: 424,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1070,7 +1092,7 @@ function ChineseApiPage() {
                                                     children: "Company Name"
                                                 }, void 0, false, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 419,
+                                                    lineNumber: 442,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1080,7 +1102,7 @@ function ChineseApiPage() {
                                                             className: "absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 423,
+                                                            lineNumber: 446,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1088,40 +1110,40 @@ function ChineseApiPage() {
                                                             name: "company",
                                                             value: formData.company,
                                                             onChange: handleChange,
-                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none",
+                                                            className: "w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]",
                                                             placeholder: "Your Company"
                                                         }, void 0, false, {
                                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                            lineNumber: 424,
+                                                            lineNumber: 447,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                    lineNumber: 422,
+                                                    lineNumber: 445,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 418,
+                                            lineNumber: 441,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 367,
+                                    lineNumber: 389,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mb-6",
+                                    className: "mb-4 sm:mb-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                             className: "block text-sm font-medium text-gray-700 mb-2",
                                             children: "Message / Inquiry"
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 436,
+                                            lineNumber: 459,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -1129,118 +1151,118 @@ function ChineseApiPage() {
                                             value: formData.message,
                                             onChange: handleChange,
                                             rows: 4,
-                                            className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none resize-none",
+                                            className: "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none resize-none text-base",
                                             placeholder: "Tell us about your business and how you plan to use Chinese vehicle data..."
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                            lineNumber: 439,
+                                            lineNumber: 462,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 435,
+                                    lineNumber: 458,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     type: "submit",
                                     disabled: isSubmitting,
-                                    className: "w-full bg-red-600 text-white py-4 rounded-lg font-semibold hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2",
+                                    className: "w-full bg-red-600 text-white py-3 sm:py-4 rounded-lg font-semibold hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px]",
                                     children: isSubmitting ? "Submitting..." : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                         children: [
                                             "Request China API Access ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$bs$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BsArrowRight"], {}, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                                lineNumber: 457,
+                                                lineNumber: 480,
                                                 columnNumber: 48
                                             }, this)
                                         ]
                                     }, void 0, true)
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 448,
+                                    lineNumber: 471,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 363,
+                            lineNumber: 385,
                             columnNumber: 15
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 342,
+                    lineNumber: 364,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 341,
+                lineNumber: 363,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "px-4 py-20 bg-gradient-to-r from-red-600 to-red-800",
+                className: "px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-red-600 to-red-800",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-4xl mx-auto text-center text-white",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-3xl md:text-4xl font-bold mb-6",
+                            className: "text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6",
                             children: "Ready to Access China Vehicle Data?"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 469,
+                            lineNumber: 492,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-red-100 text-lg mb-8",
+                            className: "text-red-100 text-base sm:text-lg mb-6 sm:mb-8 px-4",
                             children: "Join businesses worldwide using GlobalVIN to access comprehensive Chinese vehicle information."
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 472,
+                            lineNumber: 495,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-wrap gap-4 justify-center",
+                            className: "flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "#contact-form",
-                                    className: "bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition",
+                                    className: "bg-white text-red-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition min-h-[48px] flex items-center justify-center",
                                     children: "Get Started Now"
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 477,
+                                    lineNumber: 500,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                     href: "/databases",
-                                    className: "border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition",
+                                    className: "border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition min-h-[48px] flex items-center justify-center",
                                     children: "View All Databases"
                                 }, void 0, false, {
                                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                                    lineNumber: 483,
+                                    lineNumber: 506,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                            lineNumber: 476,
+                            lineNumber: 499,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                    lineNumber: 468,
+                    lineNumber: 491,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-                lineNumber: 467,
+                lineNumber: 490,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/vin/GlobalVin-master/src/app/chinese-api/page.tsx",
-        lineNumber: 112,
+        lineNumber: 134,
         columnNumber: 5
     }, this);
 }

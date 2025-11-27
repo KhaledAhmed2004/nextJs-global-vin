@@ -60,7 +60,7 @@ const Navbar = ()=>{
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-        className: "bg-[#F4F5FA] px-4 sm:px-6 lg:px-8",
+        className: "bg-[#F4F5FA] px-3 sm:px-4 md:px-6 lg:px-8",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-6xl mx-auto flex items-center justify-between py-3",
@@ -79,57 +79,57 @@ const Navbar = ()=>{
                                             className: ""
                                         }, void 0, false, {
                                             fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                            lineNumber: 48,
+                                            lineNumber: 46,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 45,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-2xl font-bold",
+                                        className: "text-xl sm:text-2xl font-bold",
                                         children: "GlobalVIN"
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                        lineNumber: 50,
+                                        lineNumber: 48,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 46,
+                                lineNumber: 44,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                            lineNumber: 45,
+                            lineNumber: 43,
                             columnNumber: 10
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                        lineNumber: 44,
+                        lineNumber: 42,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "hidden lg:flex items-center gap-8 xl:gap-12",
+                        className: "hidden lg:flex items-center gap-6 xl:gap-8 2xl:gap-12",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/",
-                                className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200",
+                                className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200 py-2 min-h-[44px] flex items-center",
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 57,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/databases",
-                                className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200",
+                                className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200 py-2 min-h-[44px] flex items-center",
                                 children: "Databases"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 63,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -138,207 +138,208 @@ const Navbar = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>setIsApisDropdownOpen(!isApisDropdownOpen),
-                                        className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200 flex items-center gap-1",
+                                        className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200 flex items-center gap-1 py-2 min-h-[44px]",
                                         children: [
                                             "APIs",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiChevronDown"], {
                                                 className: `w-4 h-4 transition-transform duration-200 ${isApisDropdownOpen ? "rotate-180" : ""}`
                                             }, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                                lineNumber: 79,
+                                                lineNumber: 77,
                                                 columnNumber: 15
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 72,
                                         columnNumber: 13
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     isApisDropdownOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50",
                                         children: apiLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: link.href,
-                                                className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors",
+                                                className: "block px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 transition-colors min-h-[44px]",
                                                 onClick: ()=>setIsApisDropdownOpen(false),
                                                 children: link.label
                                             }, link.href, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                                lineNumber: 88,
+                                                lineNumber: 86,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 84,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 70,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/technology",
-                                className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200",
+                                className: "text-gray-500 text-sm font-medium hover:opacity-80 transition-opacity duration-200 py-2 min-h-[44px] flex items-center",
                                 children: "Technology"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 100,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/auth/register",
-                                className: "text-white rounded-lg bg-[#F97316] h-10 w-36 px-2 py-1 flex items-center justify-center text-sm font-medium hover:opacity-80 transition-opacity duration-200",
+                                className: "text-white rounded-lg bg-[#F97316] h-11 px-4 lg:px-6 min-w-[120px] lg:min-w-[144px] py-1 flex items-center justify-center text-sm font-medium hover:opacity-80 transition-opacity duration-200",
                                 children: "Try for Free"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 106,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                        lineNumber: 56,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                        className: "lg:hidden text-blue-900  p-2 focus:outline-none",
+                        className: "lg:hidden text-blue-900 p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg min-w-[44px] min-h-[44px] flex items-center justify-center",
                         onClick: toggleMenu,
-                        "aria-label": "Toggle menu",
+                        "aria-label": isMenuOpen ? "Close menu" : "Open menu",
+                        "aria-expanded": isMenuOpen,
                         children: isMenuOpen ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiX"], {
                             className: "w-6 h-6"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                            lineNumber: 121,
+                            lineNumber: 120,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiMenu"], {
                             className: "w-6 h-6"
                         }, void 0, false, {
                             fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                            lineNumber: 123,
+                            lineNumber: 122,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                        lineNumber: 115,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                lineNumber: 42,
+                lineNumber: 40,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `lg:hidden transition-all duration-300 ease-in-out overflow-hidden bg-[#1E3A8A] ${isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`,
+                className: `lg:hidden transition-all duration-300 ease-in-out overflow-hidden bg-[#1E3A8A] ${isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: " pb-6 pt-2 border-t border-[#1E3A8A]",
+                    className: "pb-6 pt-2 border-t border-[#1E3A8A]",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col space-y-4 px-4 ",
+                        className: "flex flex-col space-y-1 px-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/",
-                                className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-2",
+                                className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-3 min-h-[44px] flex items-center",
                                 onClick: ()=>setIsMenuOpen(false),
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 137,
+                                lineNumber: 136,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/databases",
-                                className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-2",
+                                className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-3 min-h-[44px] flex items-center",
                                 onClick: ()=>setIsMenuOpen(false),
                                 children: "Databases"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 144,
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>setIsMobileApisOpen(!isMobileApisOpen),
-                                        className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-2 flex items-center gap-2 w-full",
+                                        className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-3 min-h-[44px] flex items-center gap-2 w-full",
                                         children: [
                                             "APIs",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$react$2d$icons$2f$hi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HiChevronDown"], {
                                                 className: `w-4 h-4 transition-transform duration-200 ${isMobileApisOpen ? "rotate-180" : ""}`
                                             }, void 0, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                                lineNumber: 158,
+                                                lineNumber: 157,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                        lineNumber: 153,
+                                        lineNumber: 152,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0)),
                                     isMobileApisOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "pl-4 space-y-2 mt-2",
+                                        className: "pl-4 space-y-1 mt-1",
                                         children: apiLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 href: link.href,
-                                                className: "block text-white/80 text-sm font-medium hover:text-white transition-colors py-1",
+                                                className: "block text-white/80 text-sm font-medium hover:text-white transition-colors py-3 min-h-[44px] flex items-center",
                                                 onClick: ()=>setIsMenuOpen(false),
                                                 children: link.label
                                             }, link.href, false, {
                                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 166,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0)))
                                     }, void 0, false, {
                                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 164,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 152,
+                                lineNumber: 151,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/technology",
-                                className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-2",
+                                className: "text-white text-base font-medium hover:opacity-80 transition-opacity duration-200 py-3 min-h-[44px] flex items-center",
                                 onClick: ()=>setIsMenuOpen(false),
                                 children: "Technology"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 179,
+                                lineNumber: 178,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vin$2f$GlobalVin$2d$master$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/auth/register",
-                                className: "text-white rounded-lg bg-[#F97316] h-10 w-36 px-2 py-1 flex items-center justify-center text-sm font-medium hover:opacity-80 transition-opacity duration-200",
+                                className: "text-white rounded-lg bg-[#F97316] h-11 w-full sm:w-36 px-4 py-2 flex items-center justify-center text-sm font-medium hover:opacity-80 transition-opacity duration-200 mt-2",
                                 onClick: ()=>setIsMenuOpen(false),
                                 children: "Try for Free"
                             }, void 0, false, {
                                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                                lineNumber: 186,
+                                lineNumber: 185,
                                 columnNumber: 13
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                        lineNumber: 136,
+                        lineNumber: 135,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                    lineNumber: 134,
+                    lineNumber: 133,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-                lineNumber: 129,
+                lineNumber: 128,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/vin/GlobalVin-master/src/components/Navbar/Navbar.tsx",
-        lineNumber: 41,
+        lineNumber: 39,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

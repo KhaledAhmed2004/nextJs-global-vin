@@ -115,36 +115,36 @@ export default function CarfaxPage() {
     <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section
-          className="px-4 py-20"
+          className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20"
           style={{
             background:
               "linear-gradient(135deg, #DC2626 0%, #B91C1C 35.36%, #991B1B 70.71%)",
           }}
         >
-          <div className="max-w-6xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="max-w-6xl mx-auto text-white grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
             <div>
-              <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
+              <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-4 sm:mb-6">
                 <span className="text-sm font-medium">Official Carfax Partner</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                 Carfax Vehicle History Reports API
               </h1>
-              <p className="text-red-100 text-lg mb-8">
+              <p className="text-red-100 text-base sm:text-lg mb-6 sm:mb-8">
                 Integrate the most trusted vehicle history data into your
                 platform. Access comprehensive accident history, service
                 records, and ownership details for millions of vehicles through
                 our powerful API.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a
                   href="#contact-form"
-                  className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center gap-2"
+                  className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2 min-h-[44px] w-full sm:w-auto"
                 >
                   Get API Access <BsArrowRight />
                 </a>
                 <a
                   href="#features"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition text-center min-h-[44px] flex items-center justify-center w-full sm:w-auto"
                 >
                   View Features
                 </a>
@@ -177,41 +177,41 @@ export default function CarfaxPage() {
         </section>
 
         {/* Stats Section */}
-        <section className="px-4 py-16 bg-white">
+        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 bg-white">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-4xl font-bold text-red-600 mb-2">40B+</p>
-                <p className="text-gray-600">Vehicle Records</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
+              <div className="p-4">
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-600 mb-1 sm:mb-2">40B+</p>
+                <p className="text-gray-600 text-sm sm:text-base">Vehicle Records</p>
               </div>
-              <div>
-                <p className="text-4xl font-bold text-red-600 mb-2">100K+</p>
-                <p className="text-gray-600">Data Sources</p>
+              <div className="p-4">
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-600 mb-1 sm:mb-2">100K+</p>
+                <p className="text-gray-600 text-sm sm:text-base">Data Sources</p>
               </div>
-              <div>
-                <p className="text-4xl font-bold text-red-600 mb-2">99.9%</p>
-                <p className="text-gray-600">API Uptime</p>
+              <div className="p-4">
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-600 mb-1 sm:mb-2">99.9%</p>
+                <p className="text-gray-600 text-sm sm:text-base">API Uptime</p>
               </div>
-              <div>
-                <p className="text-4xl font-bold text-red-600 mb-2">50</p>
-                <p className="text-gray-600">US States</p>
+              <div className="p-4">
+                <p className="text-2xl sm:text-3xl lg:text-4xl font-bold text-red-600 mb-1 sm:mb-2">50</p>
+                <p className="text-gray-600 text-sm sm:text-base">US States</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section id="features" className="px-4 py-20 bg-gray-50">
+        <section id="features" className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4">
               Comprehensive Vehicle Data
             </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4">
               Access the full spectrum of Carfax vehicle history data through
               our easy-to-integrate API
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {features.map((feature, idx) => (
                 <div
                   key={idx}
@@ -229,16 +229,16 @@ export default function CarfaxPage() {
         </section>
 
         {/* How It Works Section */}
-        <section className="px-4 py-20 bg-white">
+        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4">
               How It Works
             </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base px-4">
               Get started with Carfax API integration in three simple steps
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -272,11 +272,11 @@ export default function CarfaxPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="px-4 py-20 bg-gray-50">
+        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                   Why Choose GlobalVIN for Carfax Data?
                 </h2>
                 <p className="text-gray-600 mb-8">
@@ -318,12 +318,12 @@ export default function CarfaxPage() {
         </section>
 
         {/* Lead Capture Form Section */}
-        <section id="contact-form" className="px-4 py-20 bg-white">
+        <section id="contact-form" className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4">
               Get Started with Carfax API
             </h2>
-            <p className="text-center text-gray-600 mb-12">
+            <p className="text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base px-4">
               Fill out the form below and our team will contact you within 24
               hours
             </p>
@@ -342,9 +342,9 @@ export default function CarfaxPage() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-4 sm:p-6 lg:p-8"
               >
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Full Name *
@@ -357,7 +357,7 @@ export default function CarfaxPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]"
                         placeholder="John Doe"
                       />
                     </div>
@@ -374,7 +374,7 @@ export default function CarfaxPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]"
                         placeholder="john@company.com"
                       />
                     </div>
@@ -391,7 +391,7 @@ export default function CarfaxPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]"
                         placeholder="+1 (555) 000-0000"
                       />
                     </div>
@@ -407,13 +407,13 @@ export default function CarfaxPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none"
+                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none text-base min-h-[44px]"
                         placeholder="Your Company"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-6">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Message / Inquiry
                   </label>
@@ -422,14 +422,14 @@ export default function CarfaxPage() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none resize-none text-base"
                     placeholder="Tell us about your project and how you plan to use the Carfax API..."
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-red-600 text-white py-4 rounded-lg font-semibold hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-red-600 text-white py-4 rounded-lg font-semibold hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px]"
                 >
                   {isSubmitting ? (
                     "Submitting..."
@@ -445,25 +445,25 @@ export default function CarfaxPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="px-4 py-20 bg-gradient-to-r from-red-600 to-red-800">
+        <section className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-red-600 to-red-800">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
               Ready to Access Carfax Vehicle Data?
             </h2>
-            <p className="text-red-100 text-lg mb-8">
+            <p className="text-red-100 text-base sm:text-lg mb-6 sm:mb-8 px-4">
               Join thousands of businesses using GlobalVIN to access premium
               Carfax vehicle history reports.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <a
                 href="#contact-form"
-                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+                className="bg-white text-red-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition min-h-[44px] flex items-center justify-center w-full sm:w-auto"
               >
                 Get Started Now
               </a>
               <a
                 href="/databases"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition min-h-[44px] flex items-center justify-center w-full sm:w-auto"
               >
                 View All Databases
               </a>

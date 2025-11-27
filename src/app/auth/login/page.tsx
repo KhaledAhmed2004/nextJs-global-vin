@@ -99,14 +99,14 @@ const handleSubmit = async (e: React.FormEvent) => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-gray-50">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-6 lg:p-8 bg-gray-50 min-h-screen lg:min-h-0">
         <div className="w-full max-w-lg">
-          <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-10">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+          <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10">
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
                 Welcome Back
               </h2>
-              <p className="text-gray-600">Login to your admin account</p>
+              <p className="text-gray-600 text-sm sm:text-base">Login to your admin account</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -123,7 +123,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Enter your email"
-                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition text-base min-h-[44px]"
                     required
                   />
                   <Lock className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -143,7 +143,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     value={formData.password}
                     onChange={handleChange}
                     placeholder="Enter Password"
-                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition text-base min-h-[44px]"
                     required
                   />
                   <button
@@ -161,18 +161,18 @@ const handleSubmit = async (e: React.FormEvent) => {
               </div>
 
               {/* Remember Password & Forgot Password */}
-              <div className="flex items-center justify-between">
-                <label className="flex items-center">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+                <label className="flex items-center cursor-pointer min-h-[44px]">
                   <input
                     type="checkbox"
                     name="rememberPassword"
                     checked={formData.rememberPassword}
                     onChange={handleChange}
-                    className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                    className="w-5 h-5 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Remember Password</span>
                 </label>
-                <a href="#" className="text-sm text-purple-600 hover:text-purple-700 font-medium">
+                <a href="#" className="text-sm text-purple-600 hover:text-purple-700 font-medium min-h-[44px] flex items-center">
                   Forgot Password
                 </a>
               </div>
@@ -181,7 +181,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-lg transition duration-200 shadow-md hover:shadow-lg"
+                className="w-full bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-4 rounded-lg transition duration-200 shadow-md hover:shadow-lg min-h-[48px]"
               >
                 {isLoading ? 'Logging in...' : 'Login'}
               </button>
